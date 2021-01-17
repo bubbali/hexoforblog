@@ -56,9 +56,9 @@ So if you want to use the above data. Just use it directly. I want to remind you
 ## New Custom setting data in the test method
 When you want to cache some data in Salesforce. The custom setting is your solution. There are two types of custom settings. 
 - List custom settings
-![List Test](https://upload-images.jianshu.io/upload_images/14975804-722ee94d70b30fff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![List Test](ListTest.png)
 - Hierarchy custom settings
-![Hierarchy Test](https://upload-images.jianshu.io/upload_images/14975804-cb47be5352510a4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Hierarchy Test](HierarchyTest.png)
 
 
 The main difference is that whether your data various for specific profiles and users.  Now. I have set a value for the custom setting. Let's  access the data in the Unit Test:
