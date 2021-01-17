@@ -7,7 +7,7 @@ tags:
 categories:
 - Git
 ---
-#为什么要用SSH
+# 为什么要用SSH
 日常代码开发过程中，本地机器需要不断的和远程Github进行交互，如果要将代码下载到本地有两种方式：
 - Https
 - SSH（Secure Shell）

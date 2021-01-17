@@ -54,5 +54,5 @@ trigger MyFirstTriggerForAccount on Account(before insert){
     }   
 }
 ```
-##2.7 这一节总结
+## 2.7 这一节总结
 &emsp;&emsp;这一节分为三篇文章，持续介绍了初识Salesforce、Apex的语法与使用、Visualforce Page的开发、以及Trigger的使用等内容。基本覆盖了在Classic模式下面开发Salesforce的常见内容。相比较于传统Java、Python开发，在自定义Salesforce开发过程中，可能不会有复杂的技术与算法，但是总有一些问题会让你抓耳挠腮。更多的场景可能来自于Salesforce天生的一些特性。作为一个多租户平台系统，在资源有限的情况下，能够平稳高效的服务于全球各行业、各领域的上万家客户，给我的个人感受是Salesforce一直在进步，除了在不断完善自己的产品和开发生态外，还能够紧随市场变化创造新的产品。这样一个有生命力的平台，纵然它有诸多的限制，我想还是值得我们去拥抱并且热爱它。

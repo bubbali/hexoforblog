@@ -40,10 +40,10 @@ Administrator考试包含60道选择题（包含多选题），正确率达到65
 
 从把握基础知识到题目训练，接下来就是尽可能做更多的题目巩固知识点，每一步都会增强你对Salesforce的认识与理解；建议备考时间一个月，在备考过程中，难免会有遇拿捏不定的题目，无论你是通过实际操作、网上搜索还是询问他人解决，寻找答案的过程本身就是一件有意义的事情，抛开考试拿证，经过这样一次备考，你的知识库也会变得越来越强大；像Salesforce这种考试，运气成分还是蛮大的，希望大家都能够顺利通过Administrator考试，假设有意外，再来一次就可以了，最后赠送大家一个Administrator知识点。
 Datal0ader 与 Import wizard区别
-    -  Salesforce标准的Import wizard导入数据不能超过50 000条，Dataloader可以导入50 000条以上5 000 000以下。
-    -  Import wizard可以导入标准对象（Account、Contact、Leads、Solution、Campaigin member）与自定义对象数据，Dataloader没有限制。
-    - Import wizard导入数据时候可以选择忽略重复规则和Trigger等自动流程，Dataloader不能忽略。
-    - Import wizard不能Schedule数据导入，Dataloader支持Schedule数据导入。
-    - Import wizard不能导出、删除数据，Dataloader支持增删改导出操作。
+- Salesforce标准的Import wizard导入数据不能超过50 000条，Dataloader可以导入50 000条以上5 000 000以下。
+- Import wizard可以导入标准对象（Account、Contact、Leads、Solution、Campaigin member）与自定义对象数据，Dataloader没有限制。
+- Import wizard导入数据时候可以选择忽略重复规则和Trigger等自动流程，Dataloader不能忽略。
+- Import wizard不能Schedule数据导入，Dataloader支持Schedule数据导入。
+- Import wizard不能导出、删除数据，Dataloader支持增删改导出操作。
 
 提醒已经拿到考试认证的同学，别忘了每年需要三次维护哦。

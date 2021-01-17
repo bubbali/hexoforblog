@@ -9,6 +9,7 @@ categories:
 ---
 # Git的介绍
 Git是目前最流行的分布式管理系统，分布式管理是相对于传统的集中式管理；集中式管理的版本库在一台远程中央服务器中，开发者每次开发，都需要联网与远程库同步，代码版本库严重依赖于中央服务器，一旦宕机，严重影响工作；而分布式管理的版本库，除了远程的服务器（方便不同开发者同步代码更新），开发者的本地机器也会存在这个版本库，处处都有版本库，所以不必担心代码版本库会依赖于某一台机器，再加上Git强大的分支管理，深受广大开发者喜欢，今天我会介绍一下怎么用Git来管理文件。
+
 # Git安装
 - Git安装
    Linux、MAC、Window不同的环境，安装步骤有所区别，可以参考这篇[博客](https://linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/)。
@@ -19,6 +20,7 @@ git config --global user.name "USERNAME"
 git config --global user.email " EMAIL"
 git config --global  --list //system级别 git config --system --list local级别 git config --local  --list
 ```
+
 # Git文件操作
 - 新建版本库
 在日常工作用，你可能会遇到文件保存丢失的情况，想象一下，如果有个照相机给文件拍了一个快照，那就可以根据这个快照恢复文件；版本库的目的就是记录你对文件所做的编辑修改，方便回溯历史。
@@ -83,5 +85,6 @@ git checkout -- file //撤销工作区的修改
 ```
 git reset HEAD file //撤销暂存区的修改
 ```
+
 # 总结
 这篇着重介绍了一下使用Git进行文件操作（仓库初始化、文件新增、文件修改、回退历史记录），下一篇会从Git的分支管理来介绍，感谢支持！

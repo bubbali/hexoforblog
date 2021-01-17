@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Live My Life
+title: Enjoy the life
 subtitle: Stay hungry, Stay foolish
 author: Bubba
 language: en
-timezone:
+timezone: GMT
 
 
 # URL
@@ -32,9 +32,9 @@ permalink_defaults:
 SEOTitle: Welcome you to Bubba's life
 email: lj1377736@126.com
 description: "It's an IT blog..."
-keyword: "Bubba,livemylife,IT  blog,Blog"
-header-img: img/header_img/myhome_bg.jpg
-archives-img: img/header_img/archive_bg2.jpg
+keyword: "Bubba,IT  blog,Blog"
+header-img: img/header_img/myhome_bg.png
+archives-img: img/header_img/archive_bg2.png
 
 
 # Favicon settings
@@ -53,17 +53,17 @@ wave: true
 # SNS Settings
 # RSS: true
 github_username: bubbali
-twitter_username: 
-instagram_username: 
+# twitter_username: 
+# instagram_username: 
 linkedin_username: bubba-li-562862b3
 # facebook_username:  yourAccount
 # zhihu_username: yourAccount
-weibo_username: 
+# weibo_username: 
 
 
 # Sidebar Settings
 sidebar: true   # whether or not using Sidebar.
-sidebar-about-description: "Fat people have no future, either thin or die..."
+sidebar-about-description: ""
 sidebar-avatar:    # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - visitor   # busuanzi: https://busuanzi.ibruce.info/
@@ -108,8 +108,8 @@ friends: [
 ## Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 ##
 gitalk:
-  owner:                          # 'GitHub repo owner'
-  admin:                          # 'GitHub repo'
+  owner: bubbali                         # 'GitHub repo owner'
+  admin: Bubba                          # 'GitHub repo'
   repo:                           # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
   clientID:                       # 'GitHub Application Client ID'
   clientSecret:                   # 'GitHub Application Client Secret'
@@ -270,6 +270,12 @@ viewer: true
 # ThemeColor config
 themecolor: true
 
+menu:
+  home: / || home
+  about: /about/ || user 
+  archives: /archives/ || archive
+  tags: /tags/ || tags 
+  categories: /categories/ || th
 
 # Search Setting
 ## Search: https://go.kieran.top/post/45/

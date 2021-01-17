@@ -7,8 +7,9 @@ tags:
 categories:
 - Salesforce
 ---
-I wrote an article about the [Unit Test for Salesforce](https://www.jianshu.com/p/f9e10ce1cc1f). If you haven't read this. Recommend you strongly. Today. Let's see some scenarios in the Unit Test. This article can be a supplement for the previous article.
+I wrote an article about the [Unit Test for Salesforce](/2019/09/16/Mock%20Framework%20For%20Unit%20Test/). If you haven't read this. Recommend you strongly. Today. Let's see some scenarios in the Unit Test. This article can be a supplement for the previous article.
 # Common Scenarios
+
 ## How can access the private variable or method of tested Class
 As we all known. The class or method or variable has the access modifiers(private、public、global). Here is class A. 
 ```
@@ -40,6 +41,7 @@ private class ATest {
 }
 ```
 We can run the test method successfully. Your code shouldn't include many of this annotation.  Unfortunately. if you are in this situation. Please consider refactoring your code.
+
 ## Which organization's data can be accessed in the test method
 It's better to prepare our own test data in the Unit Test. That meant that the test data shouldn't depend on the specific organization. But everything has an exception. you might do the below things:
 - Access the Org's profile
@@ -50,6 +52,7 @@ Do I need to create my own profile or record type? The answer is no. Firstly. yo
 - AsyncApexJob、CronTrigger
 - ApexClass、ApexTrigger、ApexComponent、ApexPage
 So if you want to use the above data. Just use it directly. I want to remind you that when you using the user data in UT. Please be careful. Your unit test may be failed in another environment. An alternative solution is that you could use the  **System.runas()**. if you are interested in this method. please see the detail by this [link](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_tools_runas.htm)
+
 ## New Custom setting data in the test method
 When you want to cache some data in Salesforce. The custom setting is your solution. There are two types of custom settings. 
 - List custom settings

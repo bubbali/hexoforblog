@@ -9,7 +9,7 @@ categories:
 - Salesforce
 ---
 今天这篇是延续[Salesforce开发教程（一）](https://www.jianshu.com/p/2744b94850bc)、[Salesforce开发教程（二）](https://www.jianshu.com/p/af63b92f3b93)的内容，对之前没涉及到的主题进行的补充。主要包括Unit Test、Batch、Schedule Job、Rest和Soap相关内容。
-#测试类
+# 测试类
 当我们写完某个功能的时候，怎么能够保证自己写的代码正常运行起来呢？大家可能会说测试一下就可以了，那是不是这样子呢？其实测试分为单元测试、集成测试、功能测试，从前到后分别对应着三个阶段，这里的测试类指的是单元测试，为了能够让集成测试和功能测试顺利的运行起来，作为开发者，应该能够保证单元测试正常运行，保证函数方法是没问题的，后面的集成、功能测试才能正常顺利进行；换句话说，之所有单元测试这么重要，是为了能够将代码问题提前暴露出来，尽早的解决。所以我们应该除了将功能开发完成后，还需要通过测试类来验证功能是否完整；除此以外Salesforce会要求代码的单元测试覆盖率达到75%以上，所以单元测试的重要性就不言而喻了。下面我们来看看在Salesforce中怎样进行单元测试？
 单元测试的语法很简单：
 ```
@@ -29,6 +29,7 @@ private class MyTestClass {
 }
 ```
 简单可以简测试类的过程分为三个步骤：
+
 - 准备数据
 这里的数据指的是运行测试类数据，每当测试类运行完成后，数据库的数据会被回滚，不必担心测试类中修改的数据影响到数据库。这里注意提倡测试类用到的数据应该避免依赖于某个组织（不建议使用SeeAllData=true标注）；推荐你使用**@testSetup**申明**setup**[方法](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_testsetup_using.htm)准备数据；另外需要注意的是，Salesforce有一些系统限制是难以避免的（比如Soql  101 错误），出现这样的错误后，需要优化一下Soql和DML操作。
 - 调用要测试的类
@@ -54,7 +55,7 @@ private class MyTestClass {//Class申明为Private且名字应该能够识别出
 }
 ```
 如果你对UT还想有更多的思考和实践，希望我之前写过的一篇[Mock Framework For Unit Test](https://www.jianshu.com/p/f9e10ce1cc1f)可以帮助到你。
-#Batch和Schedule Job
+# Batch和Schedule Job
 针对Batch相信大家不会陌生，一句话概括呢，就是用来处理数据量大的场景；为什么我们要用Batch，而不使用普通的类呢，总结了一下，Batch大概有下面三个优点：
 - 可以提高Salesforce的系统限制，普通Class的Soql的每个事务查询次数是100次，而用Batch可以达到200次；其次是数据量的大小，普通Class的Soql查询数据上限是50 000，Batch可以达到50 000 000。
 - Batch可以批量处理数据，在每次执行**execute**的方法时候，可以接收任意条数大小的数据量，每个Batch最多可以处理200条数据，意味着你可以将数据量分为200一个批次执行。
@@ -62,6 +63,7 @@ private class MyTestClass {//Class申明为Private且名字应该能够识别出
 
 下面我们来看一下怎么写一个Batch，实现**Database.Batchable**接口就可以了:
 这个接口有三个方法需要实现：
+
 1. 准备数据
 *global (Database.QueryLocator | Iterable<sObject>) start(Database.BatchableContext bc) {}*
 这个方法可以返回**QueryLocator**或者**Iterable**对象，注意如果用**Iterable**的话，Soql查询上限是50 000。

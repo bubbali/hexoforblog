@@ -8,17 +8,16 @@ categories:
 - Salesforce
 ---
 In this blog, I will explain steps on how to use SFDX in Developer, Sandbox or Production Orgs. Hope this article could help you. Let's get started.
-#Prerequisite
-1. [VSCode install]([https://code.visualstudio.com/Download](https://code.visualstudio.com/Download)
-)
-2. [Salesforce CLI Tool]([https://developer.salesforce.com/tools/sfdxcli](https://developer.salesforce.com/tools/sfdxcli)
-)
-3. [Salesforce Extension Tools]([https://developer.salesforce.com/tools/extension_vscode](https://developer.salesforce.com/tools/extension_vscode)
-)
 
-Please install the above tool. if you want to continue the below steps. I also suggest you take some time on the [document]([https://forcedotcom.github.io/salesforcedx-vscode/](https://forcedotcom.github.io/salesforcedx-vscode/)
-). 
-#OAuth a Salesforce Org
+# Prerequisite
+1. [VSCode install](https://code.visualstudio.com/Download)
+2. [Salesforce CLI Tool](https://developer.salesforce.com/tools/sfdxcli)
+3. [Salesforce Extension Tools](https://developer.salesforce.com/tools/extension_vscode)
+
+
+Please install the above tool. if you want to continue the below steps. I also suggest you take some time on the [document](https://forcedotcom.github.io/salesforcedx-vscode/). 
+
+# OAuth a Salesforce Org
 Because of the salesforce development is not on premises. Whatever you use the eclipse or sublime. you always need to authorize an account of the SF. And the same method applies to the VSCode. How can I OAuth an Org through VSCode? You just input this command.
 ```
 sfdx force:auth:web:login -a <setaliasname>  -r <instanceurl> 
@@ -33,7 +32,7 @@ Congratulations.  Next, we could create a project based on the OAuth process. Be
 2. When my machine authorizes an Org. The essence is that my local machine saved a access token and refresh token. It will promise communication with salesforce.if you have enough. I think you could find the file in .sfdx folder below.
 ![configure json file](https://upload-images.jianshu.io/upload_images/14975804-1f3b253b61f35164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#Create Project with vs code
+# Create Project with vs code
 This step will create a sfdx project with command.
 ```
 sfdx force:project:create -n <projectName>  -x
@@ -47,7 +46,8 @@ Let's open it in vs code. you should pay attention to the manifest folder. There
 ![set default org](https://upload-images.jianshu.io/upload_images/14975804-9fb114f22b42af7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![sfdx configure](https://upload-images.jianshu.io/upload_images/14975804-b05ea5a74c109b01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 After you have configured the Org info with the project. We can do anything on the local machine. There is no difference between on salesforce console and local machine.
-#Rerieve Code from Org
+
+# Rerieve Code from Org
 This step focuses on the retrieve code from our authorization org. There are mainly three methods.
 1. from the local's metadata file
 as for the BubbaTest project. We could execute the command to retrieve the code.
@@ -71,7 +71,8 @@ sfdx force:source:retrieve -m ApexClass:MyApexClass
 sfdx force:source:retrieve -m "ApexClass, Profile:Content Experience Profile"
 ```
 if you have no idea on salesforce metadata type. Please reference this [document](https://developer.salesforce.com/docs/atlas.en-us.218.0.api_meta.meta/api_meta/meta_types_list.htm)
-#Deploy Code to Org
+
+# Deploy Code to Org
 After your development complete.  When you deploy local code to remote. There are similar ways to the retrieved code.
 ```
 sfdx force:source:deploy -m ApexClas
@@ -83,6 +84,7 @@ if you want to retrieve or deploy code in production. Please use the force:mdapi
 sfdx force:mdapi:deploy -m ApexClas
 sfdx force:mdapi:retrieve -m ApexClas
 ```
-#Conclusion
-Now. We could use the vs code to complete daily development through the command line. Including authorization a new Org、retrieve code or deploy code. And if you don't know how to create a class or create a trigger, Please reference this [document]([https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_apex.htm#cli_reference_class_create](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_apex.htm#cli_reference_class_create)
+
+# Conclusion
+Now. We could use the vs code to complete daily development through the command line. Including authorization a new Org、retrieve code or deploy code. And if you don't know how to create a class or create a trigger, Please reference this [document](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_apex.htm#cli_reference_class_create)
 ). Because of the Salesforce extension have integrated most of the CLI. you can just complete these operations through simple UI. Next blog will continue the development with vs code.  if you have any question about the content. Please give me comments.

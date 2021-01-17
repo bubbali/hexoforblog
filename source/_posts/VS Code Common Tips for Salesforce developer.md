@@ -32,6 +32,7 @@ It's amazing. Why we can do this? That's because of the access token stored in o
 Once we auth an org successfully. We can use it permanently unless you revoke it. Let's see what happened after the auth process. After you auth the org. The org of the definition file will be stored in the root/.sfdx direction. you can find a folder named .sfdx in your root direction. open it by vscode. 
 ![Org's definition](https://upload-images.jianshu.io/upload_images/14975804-82146d80855cd027.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 You should pay attention to the access token、refresh token and client id. Through this information. The local machine could request a connection with the remote server resource. for example. you can request any rest api source. and not limit development. 
+
 # Developer Process
 1. Create local project
 Before we start development. The second thing is that you should create a project.
