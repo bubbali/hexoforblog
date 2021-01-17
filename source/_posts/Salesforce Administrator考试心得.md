@@ -10,7 +10,7 @@ categories:
 前段时间刚考完Administrator考试，今天想给大家分享一些经验，希望能够帮助到一些人。
 # 考试介绍
 为了能够提高Salesforce从业人员的相关技能，Salesforce提供了丰富多彩的学习平台[Trailhead](https://trailhead.salesforce.com/)和各种考试路线；在这里，你会享受到沉浸式的学习体验，不同于传统的照本宣科；它会结合具体的业务场景把新知识技能传授给你，只要投入时间和精力，成长指日可待；针对不同的角色（开发、管理员、顾问、架构师等），Salesforce提供了[不同的学习路径](https://trailhead.salesforce.com/credentials/administratoroverview)，要准备Administrator考试的你，第一步做的事情就是注册一个[Trailhead](https://trailhead.salesforce.com/)账号，然后找到Administrator的考试认证主题，了解一下相关内容。
-![各种学习路径](https://upload-images.jianshu.io/upload_images/14975804-b399fcffe0e8eb69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![各种学习路径](learnpath.png)
 要想全面的了解Salesforce的相关功能，要想顺利的通过Administrator考试，至今还没有哪个平台比Trailhead更好；针对Administrator认证呢，主要针对以后想从事Salesforce管理员工作的同学，Administrator认证的备考过程中，你会了解到Salesforce的日常配置和各个Cloud模块内容，可能不会特别深入，但无疑会对你今后的工作起到至关重要的作用。
 Administrator考试分为两个阶段，第一个阶段是Salesforce Certified Administrator,当你通过初级管理员认证后，可以进入下一个阶段，认证Salesforce Certified Advanced Administrator。今天专注于初级管理员认证。下面我会从以下考试大纲介绍、备考过程两方面介绍一下相关内容。
 # 考试大纲

@@ -26,11 +26,11 @@ for example. I want to authorize my developer org. I will open my terminal input
 ```
 sfdx force:auth:web:login -a BubbaTest -r https://login.salesforce.com
 ```
-if you have executed the auth command. And get a response like the below picture. ![success signal](https://upload-images.jianshu.io/upload_images/14975804-fe442cdc55629fd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+if you have executed the auth command. And get a response like the below picture. ![success signal](successsignal.png)
 Congratulations.  Next, we could create a project based on the OAuth process. Before entering into the next step. There are two proposals.
 1. you should pay attention to the instance URL parameters. if you don't know. Please open your Org. Search my domain in setting side. 
 2. When my machine authorizes an Org. The essence is that my local machine saved a access token and refresh token. It will promise communication with salesforce.if you have enough. I think you could find the file in .sfdx folder below.
-![configure json file](https://upload-images.jianshu.io/upload_images/14975804-1f3b253b61f35164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![configure json file](configurejson.png)
 
 # Create Project with vs code
 This step will create a sfdx project with command.
@@ -41,10 +41,10 @@ for example. I will create a project with the below command.
 ```
 sfdx force:project:create -n TestProject -x 
 ```
-![project file catalog](https://upload-images.jianshu.io/upload_images/14975804-f0b0373aaa351214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![project file catalog](projectcatlog.png)
 Let's open it in vs code. you should pay attention to the manifest folder. There is a package.xml file. We will use it in the next step. You may confuse that I only create a local project without Salesforce Org information. How I can develop use this project. Great. Before we start to develop. You should execute set default Org info in vs code.
-![set default org](https://upload-images.jianshu.io/upload_images/14975804-9fb114f22b42af7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![sfdx configure](https://upload-images.jianshu.io/upload_images/14975804-b05ea5a74c109b01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![set default org](setdefaultorg.png)
+![sfdx configure](sfdx.png)
 After you have configured the Org info with the project. We can do anything on the local machine. There is no difference between on salesforce console and local machine.
 
 # Rerieve Code from Org
@@ -57,7 +57,7 @@ sfdx force:source:retrieve -x manifest/package.xml
 This way may need too much time. So I always suggest you apply the below methods.
 2. from local's source code
 Our code exists in the force-app/main/default folder. Before we update the function. And the local code may different from remote code. So we need to refresh it.
-![code location](https://upload-images.jianshu.io/upload_images/14975804-8a334aa387f291ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![code location](codelocation.png)
 ```
 sfdx force:source:retrieve -p force-app/main/default 
 sfdx force:source:retrieve -p force-app/main/default/lwc

@@ -11,8 +11,8 @@ categories:
 Unit Test executes your logic code with known input parameters and evaluates the output for expected results. 
 Different from the Integration Test And Functional Test. They are only testing the isolation method. Focused on the smallest possible bit of code that can be tested. Unit Test ahead of integration testing. And make sure the logic code can running successfully based on the test data. Discover problems in advance. Another thing your code average coverage should above 75%.
 # How to write Unit Test 
-![Positive Unit Test Step](https://upload-images.jianshu.io/upload_images/14975804-f49bfa67a08cb2fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![Negative Unit Test Step](https://upload-images.jianshu.io/upload_images/14975804-73511628cbf2bf14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Positive Unit Test Step](positiveut.png)
+![Negative Unit Test Step](negativeut.png)
 
 - Prepare Test Data
   1. Unit Test Data is temporary. When you Unit Test finished. And Data will rollback
