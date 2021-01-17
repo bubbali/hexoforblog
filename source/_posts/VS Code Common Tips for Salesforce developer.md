@@ -74,7 +74,7 @@ Now. we have completed the development test and unit test. As for Salesforce dev
 ```
 sfdx force:apex:test:run --tests MyTest.myTest --loglevel error --codecoverage
 ```
-![Run the unit test](RunTU.png)
+![Run the unit test](RunUT.png)
 
 - Click the icon
 ![show coverage](ShowCoverage2.png)

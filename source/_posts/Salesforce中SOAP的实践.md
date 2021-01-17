@@ -21,7 +21,7 @@ categories:
 前提准备：
 
 - WSDL文件下载
-![Generate Enterprise WSDL](https://upload-images.jianshu.io/upload_images/14975804-4f8a6bd1579ad077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Generate Enterprise WSDL](GenerateWSDL.png)
 
 如果还没有可以用于测试的SF Organization的同学，请先注册一个[Developer Edition](https://developer.salesforce.com/signup)。
 - [SOAP UI](https://www.soapui.org/)安装
@@ -29,8 +29,8 @@ categories:
 准备工作完成后，接下来看一下怎样利用SOAP UI调用SF的服务，大体分为三个步骤：
 
 1. 新建SOAP项目，引入刚才下载的WSDL文件；
-![New SOAP Project](https://upload-images.jianshu.io/upload_images/14975804-828243720594ea1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![SOAP Binding](https://upload-images.jianshu.io/upload_images/14975804-bdb30772d64f72a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![New SOAP Project](NewSOAPProject.png)
+![SOAP Binding](SOAPBinding.png)
 
 展开左边的下拉列表，可以看到一系列WSDL定义的操作，随意打开其中某个文件，内容包含了请求的地址和参数，接下来将调用这些操作。
 
@@ -135,7 +135,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: org/antlr/runtime/Cha
 ```
 这个时候需要引入[Antlr.jar](https://www.antlr.org/download.html)。 
 到现在为止呢，我们将会用到下面5个文件：
-![准备工作](https://upload-images.jianshu.io/upload_images/14975804-e3559cea7a6a3a5f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![准备工作](PrepareWork.png)
 
 控制台执行以下命令：
 ```
@@ -154,7 +154,7 @@ Output:
 - 验证SFEnterprise.jar
 
 注意将wsc和生成的SFEnterprise.jar都引入到Java项目中。
-![SFSOAPTest Project](https://upload-images.jianshu.io/upload_images/14975804-ffb1977cc0922c62.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![SFSOAPTest Project](SFSOAPTest.png)
 SFSOAPTest.java
 ```
 package wsc;

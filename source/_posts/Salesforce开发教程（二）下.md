@@ -36,7 +36,7 @@ trigger MyFirstTriggerForAccount on Account(trigger_events){
 }
 ```
 &emsp;&emsp;接下来我们思考的事情可能是这里的trigger_events，我想在做这件事情之前，先来看一下Salesforce的执行顺序：
-![Salesforce执行顺序](https://upload-images.jianshu.io/upload_images/14975804-1fc12d3ee1661b6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Salesforce执行顺序](ExecuteOrder.png)
 
 &emsp;&emsp;在这里，注意一下**Apex(before) triggers**、**Apex(after) triggers**这两个事件。在这两个事件中间，数据会被保存到数据库（并没有committed)，在after triggers事件之后，数据将被Commit到数据库。上面MyFirstTriggerForAccount要定义为before event还是after event?假设我们定义为after event，那么数据库操作将会执行两次，第一次保存我们新建的Account的基本信息，第二次将会修改我们的Description信息。如果用before event呢，数据库只会执行一次保存操作，所以我们将采用before insert，因为只在插入数据的时候才触发该逻辑块。我们的触发器将进一步完善。
 ```

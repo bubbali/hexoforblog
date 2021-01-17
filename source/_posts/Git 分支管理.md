@@ -47,7 +47,7 @@ $ git checkout -b test
 ```
 $ touch testFile //新建一个testFile的文件
 ```
-![testfile内容](https://upload-images.jianshu.io/upload_images/14975804-d1a1bee5331338cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![testfile内容](TestFile.png)
 如果此时你切换到Master分支，会发现并不存在这个文件，这是因为当前分支操作在*test*分支上。
 ```
 // 将文件提交到test分支

@@ -50,11 +50,11 @@ $ ssh-add -K ~/.ssh/id_rsa
 // 复制文本内容
 $ pbcopy < ~/.ssh/id_rsa.pub
 ```
-![Settings.png](https://upload-images.jianshu.io/upload_images/14975804-ccdb86402579061b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Settings.png](GitHubSetting.png)
 
-![New SSH Key.png](https://upload-images.jianshu.io/upload_images/14975804-8ec055ef64f49ca4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![New SSH Key.png](NewSSHKey.png)
 
-![Add SSH Key.png](https://upload-images.jianshu.io/upload_images/14975804-25cf926daafd703c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Add SSH Key.png](AddSSHKey.png)
 
 将公钥复制到**key**中，Title可以随便命名，尽量通俗易懂，能够区分出是本地机器即可。
 配置完成后，通过以下命令查看一下是否可以登录成功：

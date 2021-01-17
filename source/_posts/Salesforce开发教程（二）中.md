@@ -14,7 +14,7 @@ categories:
 &emsp;&emsp;这里大家可能会想个问题，为什么不直接使用HTML呢，其实细想一下，HTML是静态资源，而当页面需要动态加载数据的时候，就会不好使了，所以你看Visualforce Page更像Java开发中的JSP（Java Server Pages）。在这种情况下，页面需要由服务器端进行编译转换然后提供Web Page。接下来的问题就是动态的数据或者屏幕触发方法是从哪里来的呢？Salesforce中提供的方案是一个页面需要绑定一个Controller Apex 类，除此以外，还可以通过继承父类获取更多的属性，下面我们来看一下Page运行原理的示意图。
 
 ### 2.4.1 Page运行原理
-![VisualforcePage](https://upload-images.jianshu.io/upload_images/14975804-eaba8936d8a590b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![VisualforcePage](VFPage.png)
 &emsp;&emsp;上图为Page的加载过程，大体可以分为四个步骤：
 &emsp;&emsp;1、客户端发起URL请求，.../apex/MyPage
 &emsp;&emsp;2、Salesforce会根据请求地址执行相应的页面记录（这里需要注意的是，SF作为云服务平台，那么它是怎么找到当前用户访问的资源呢，原因就在于申请的Organization是有Id记录，所以通过OrgId过滤可以命中自己所需的资源）
@@ -111,7 +111,7 @@ public class MyAccountController{
 ```
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MyAccountPage.page
 &emsp;&emsp;之前的功能仅是显示了所有人是当前登陆用户的客户，现在添加了一个PageBolck供用户在该页面添加客户：
-![预览结果](https://upload-images.jianshu.io/upload_images/14975804-647ccd9953383d87.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![预览结果](ShowResult.png)
 &emsp;&emsp;当用户输入客户姓名、行业等信息之后，点击保存按钮（事件触发），执行Controller中的save方法，跳转到刚创建的客户记录详细页面，这个过程有两个问题值得注意：
 1、当用户点击Save按钮后，执行了后台的Controler方法，那么表单什么时候提交的？其实在你点击Save方法时，sf会先执行Set方法，然后再执行你调用的方法。
 2、VF页中支持执行后台方法的标签有哪些呢？
@@ -163,7 +163,7 @@ public class MyAccountController{
 &emsp;&emsp;着重强调一下reRender 属性，reRender作用是刷新局部表单数据，局部指的是DOM中的Id，通过传递给reRender参数Id，然后起到局部刷新的作用，比如上面的例子，定义了第二个PageBlock IdmyAccounts，所以当我执行完Save方法后，会自动触发该模块数据更新（实则利用Ajax重新调用了一遍getmyAccounts方法）,与这个属性可能还经常一块出现的是Rendered 、renderAs，感兴趣的同学可以参考： [Difference between Render, reRender and renderAs](https://sfdcpanther.wordpress.com/2017/10/04/difference-between-render-rerender-and-renderas/)
 ## 2.5 SOQL&DML
 &emsp;&emsp;在开发过程中，不可缺少的一个过程是程序需要和数据库进行交互操作（CRUD），在Salesforce平台上，查询数据常用的是SOQL(Salesforce Object Query Language)
-![SOQL提取数据的过程](https://upload-images.jianshu.io/upload_images/14975804-4cf716b9f1c5f214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![SOQL提取数据的过程](SOQLRetrieve.png)
 &emsp;&emsp;语法与SQL类似，支持Where、Group、Order by、Like等语法，示例：
 ```
 SELECT Id, Name
@@ -171,7 +171,7 @@ FROM Account
 WHERE Name  Like '%Sandy' 
 ```
 &emsp;&emsp;但是SQL的高级语法不支持，比如左连接、右连接等。其实如果你了解Salesforce[表之间的关系](https://help.salesforce.com/articleView?id=overview_of_custom_object_relationships.htm&type=5)，SQOL自身的子查询、父查询可以满足大部分业务。
-![SOQL Is Powerful](https://upload-images.jianshu.io/upload_images/14975804-1193f519dc7ec657.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![SOQL Is Powerful](SOQLISPowerful.png)
 &emsp;&emsp;注意上图分为三个部分，目前只需要看Apex + SOQL部分，通过Apex与SOQL结合，可以查询返回逻辑层需要的所有数据（包括业务数据、配置数据等）。
 #### 2.5.1 语法说明
 ```
