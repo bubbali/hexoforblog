@@ -29,4 +29,4 @@ header-img: "img/scenery/about_bg.png"
 ## Treat me to coffee
 >  If you feel that what I have written is of some value to you, I am glad that you are willing to invite me to drink coffee...
 
-<img src="../img/scenery/bubbaweixin.jpeg" width="350" alt="treat_me_to_coffee.png"></img>
+<img src="../img/scenery/appreciate.png" width="350" alt="treat_me_to_coffee.png"></img>
